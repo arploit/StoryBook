@@ -1,11 +1,12 @@
-import React from 'react';
-import Header from './components/Header/Header';
+import * as React from 'react'
+import Badges from './components/Badges';
+
 
 const App = () => {
 	return (
 		<>
 			<div>App</div>
-			<Header />
+			<Badges label={"Hello"} />
 		</>
 	);
 };

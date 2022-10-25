@@ -16,7 +16,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(ts|tsx)$/,
-				loader: 'babel-loader',
+				use: 'ts-loader',
+				exclude: /node_modules/,
 			},
 			{
 				enforce: 'pre',
@@ -28,19 +29,23 @@ module.exports = {
 				type: 'asset/inline',
 			},
 			{
-				test: /\.(less|module.less)$/,
+				test: /\.less$/,
+				exclude: /\.module\.less$/,
+				use: ['style-loader', 'css-loader', 'less-loader'],
+			},
+			{
+				test: /\.module\.less$/,
 				use: [
-					{ loader: 'style-loader' },
+					'style-loader',
 					{
 						loader: 'css-loader',
 						options: {
-							sourceMap: true,
 							modules: {
-								localIdentName: '[name]__[local]___[hash:base64:5]',
+								localIdentName: '[path][name]__[local]--[hash:base64:5]',
 							},
 						},
 					},
-					{ loader: 'less-loader' },
+					'less-loader',
 				],
 			},
 		],
