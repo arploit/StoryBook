@@ -22,19 +22,11 @@
 
             span {
                 margin: 1rem;
+                font-size: 1rem;
+                font-weight: 550;    
             }
         }
 
-.background-color-variant(@variant, @intensity) {
-    @background: "variable-color-@{variant}_Intensity_@{intensity}";
-    background: @background;
-}
-
-each(range(12), {
-    .__blue_@{value} {
-        .background-color-variant("blue", @value)
-    }
-});
 }
 
 }
