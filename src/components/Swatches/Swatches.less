@@ -1,0 +1,40 @@
+.Sw__block {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+    .swatches__Block {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .swatches {
+            width: 6.5rem;
+            height: 6.5rem;
+            background: tomato;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2.5rem;
+
+            span {
+                margin: 1rem;
+            }
+        }
+
+.background-color-variant(@variant, @intensity) {
+    @background: "variable-color-@{variant}_Intensity_@{intensity}";
+    background: @background;
+}
+
+each(range(12), {
+    .__blue_@{value} {
+        .background-color-variant("blue", @value)
+    }
+});
+}
+
+}

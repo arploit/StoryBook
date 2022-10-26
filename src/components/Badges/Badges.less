@@ -1,3 +1,10 @@
+@import '../../assets/color.less';
+
+.BadgesColor(@backgroundColor, @TextColor){
+    background:@backgroundColor;
+    color: @TextColor;
+}
+
 .badge{
     background: tomato;
     padding: 0.5rem 1rem;
@@ -7,10 +14,71 @@
     align-items: center;
     justify-content: center;
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px
 
 }
 
 .badges__blue{
-    background: #3363FF;
-    color: #fff;
+    .BadgesColor(@variable-royal-blue,@variable-color-White);
 }
+
+.badges__pink {
+    .BadgesColor(@variable-color-Pink_Intensity_3, @variable-color-White);
+}
+
+.badges__green {
+    .BadgesColor(@variable-color-Green_Intensity_3, @variable-color-White);
+}
+
+.badges__yellow {
+    .BadgesColor(@variable-color-Yellow_Intensity_3, @variable-color-black);
+}
+
+.badges__orange {
+    .BadgesColor(@variable-color-Orange_Intensity_3, @variable-color-White);
+}
+
+.badges__red {
+    .BadgesColor(@variable-color-Red_Intensity_3, @variable-color-White);
+}
+
+.badges__purple {
+    .BadgesColor(@variable-color-Purple_Intensity_3, @variable-color-White);
+}
+
+.badges__black {
+    .BadgesColor(@variable-color-Gray_Intensity_3, @variable-color-White);
+}
+
+.badges__lightBlue {
+    .BadgesColor(@variable-color-blue_Intensity_11,@variable-color-blue_Intensity_3);
+}
+
+.badges__lightPink {
+    .BadgesColor(@variable-color-Pink_Intensity_11,@variable-color-Pink_Intensity_3);
+}
+
+.badges__lightGreen {
+    .BadgesColor(@variable-color-Green_Intensity_11,@variable-color-Green_Intensity_3);
+}
+
+.badges__lightYellow {
+    .BadgesColor(@variable-color-Yellow_Intensity_11,@variable-color-Yellow_Intensity_1);
+}
+
+.badges__lightOrange {
+    .BadgesColor(@variable-color-Orange_Intensity_11,@variable-color-Orange_Intensity_3);
+}
+
+.badges__lightRed {
+    .BadgesColor(@variable-color-Red_Intensity_11,@variable-color-Red_Intensity_3);
+}
+
+.badges__lightPurple {
+    .BadgesColor(@variable-color-Purple_Intensity_11,@variable-color-Purple_Intensity_3);
+}
+
+.badges__Gray {
+    .BadgesColor(@variable-color-Gray_Intensity_11,@variable-color-Gray_Intensity_3);
+}
+

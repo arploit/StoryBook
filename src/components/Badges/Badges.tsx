@@ -7,7 +7,7 @@ interface Props {
 }
 
 
-const Badges = ({ label, variant = 'blue' }: Props) => {
+const Badges = ({ label = "Label Text", variant = 'blue' }: Props) => {
     return (
         <div className={`badge badges__${variant}`}>{label}</div>
     )
